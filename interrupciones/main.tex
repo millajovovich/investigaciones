@@ -21,5 +21,10 @@
 Sebastian Balbin Rivera\\\\
 INTERRUPCIONES\\
 
+La interrupción es una función que se vio en necesidad de ser implementada ya que sin esta el sistema se gastaba más rendimiento y tiempo. Cada cierto tiempo se realizaba una verificaron de las señales prioritarias que llegaban al procesador de las demás componentes del sistema, como no era fijo que en el escaneo de estas señales hubiera alguna para desplegar una acción, desperdiciaba tiempo que podía emplear en otras funciones operativas. \\\\
+Las demás partes del sistema continuamente están mandando señales de interrupción al procesador, pero estas tienen un orden de prioridades ya que si llegan todas juntas pueden arriesgar el correcto funcionamiento del sistema y aun peor, perder el proceso por completo de lo que se haya estado realizando durante el colapso por estas, los procesadores tienen unos buses específicos para estas señales, ya que son de alta prioridad.\\\\ 
+Las interrupciones tienen el funcionamiento de mandar ya sea de manera asíncrona o síncrona una señal que representa una orden para el procesador, este siempre está trabajando, pero cuando le llega una interrupción, suspende sus procesos y va al controlador de interrupciones o también llamado ISR (Interrupt Service Routine o Rutina de Servicio de Interrupción). 
+
+
 
 \end{document}

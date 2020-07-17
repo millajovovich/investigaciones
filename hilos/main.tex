@@ -1,4 +1,4 @@
-\documentclass[11pt]{letter}
+\documentclass[12pt]{letter}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
@@ -10,7 +10,7 @@
 	left=3cm, 
 	right=3cm, 
 }
-\renewcommand{\baselinestretch}{1.3}
+\renewcommand{\baselinestretch}{1.1}
 
 \begin{document}
 \begin{center}
@@ -23,14 +23,17 @@ HILOS
 \end{center}
 Estos son procesos que parece que se ejecutan al mismo tiempo en la CPU, dándole al computador la virtud de ser multitareas, ejecutando grandes procesos al mismo tiempo, que no es realmente al mismo tiempo, aunque lo parezca. Los hilos fueron una medida a implementar al verse la necesidad de satisfacer más operaciones de un computador al mismo tiempo, dentro del procesador hay núcleos, y con estos bastan para realizar las funciones del sistema, estos pueden ejecutar muchas instrucciones dependiendo de su velocidad de ciclos que realice, mientras más ciclos por segundo mejor. \\\\
 Hay ciertos núcleos que se usaban o se usan, que en si, solo se pueden encargase de 1 o dos procesos, por ejemplo, tener una APP abierta en el computador, pero esto presenta limitaciones respecto a realizar varias actividades al mismo tiempo, es aquí donde entra el termino HILOS, que sería el encargado de poder ejecutar varias actividades al mismo tiempo, recordemos que los sistemas están diseñados para diferentes propósitos, esto tiene que ver con el tema ya que hay computadores que tienen restricciones a la hora de encargarle a los núcleos tareas o procesos, pero como fue dicho antes, esto depende del sistema que se tenga, los hilos se pueden encargar de varias funciones en un solo proceso, alivianando así la carga y mejorando el uso de esta por ejemplo en el uso de un juego son muchos procesos, pero los diferentes hilos se pueden encargar uno de la interfaz otro de los procesos que conllevan  esa interfaz y lo que ejecuta el usuario, de esa manera se van repartiendo las funcionalidades para optimizar el funcionamiento.\\\\
-El real funcionamiento de estos procesos trabajados no es que se realicen al mismo tiempo, es que internamente a una velocidad increíblemente alta se va saltando de hilo en hilo realizando funciones que cada hilo tiene en su pila, junto con datos de CPU, este último es porque para manejar y repartir los procesos entre estos procesadores lógicos se tienen que obtener información de lo que se va a manejar y como; entonces el proceso consiste en hacer una parte del ejecución de un hilo y salta a otro, realiza de nueva una parte y salta a otro y así sucesivamente, algunos computadores no se enfocan tanto en la tecnología threading, sino mas bien en potenciar los núcleos ya que estos pueden hacer mejor el trabajo que los hilos al tener todos los accesos y propiedades para realizar lo propuesto.
-
+El real funcionamiento de estos procesos trabajados no es que se realicen al mismo tiempo, es que internamente a una velocidad increíblemente alta se va saltando de hilo en hilo realizando funciones que cada hilo tiene en su pila, junto con datos de CPU, este último es porque para manejar y repartir los procesos entre estos procesadores lógicos se tienen que obtener información de lo que se va a manejar y como; entonces el proceso consiste en hacer una parte del ejecución de un hilo y salta a otro, realiza de nueva una parte y salta a otro y así sucesivamente, algunos computadores no se enfocan tanto en la tecnología threading, sino mas bien en potenciar los núcleos ya que estos pueden hacer mejor el trabajo que los hilos al tener todos los accesos y propiedades para realizar lo propuesto como dice Elías Rodríguez García en su artículo “El doble de hilos no equivale al doble de núcleos… una tecnología que hace creer al ordenador por medio de software que tiene el doble de núcleos de los que realmente hay. Es lo que se llama procesador lógico, y por supuesto aun con el doble de procesadores, no se tiene el doble de rendimiento”.\\\\
+Las aplicaciones que se usan generalmente tienen se adaptan al tratamiento de hilos, sin embargo, recordemos que hay procesadores que no permiten el hilo, pero esto no es problema ya que las APPS fusionan con y sin hilos y se puede ejecutar la función sin problema alguno, hay algunos programas un poco viejos que tal vez todavía se usen, esos no están acoplados a manejar los hilos, por lo tanto no son compatibles con esta función, y dependería de la ejecución directa del procesador o dicho de otra manera tendrá solo un hilo para ejecutarse, también cabe resaltar que una amplia red multi-hilos en un sistema puede ser perjudicial para la CPU debido al tiempo que tiene que gastar cambiando de contextos entre hilos, por lo tanto tiene que ser adecuado a la velocidad del computador.\\\\
+Un computador contiene librerías para trabajar desde nivel de usuario (ULT), claro que desde esta interfaz hay algunas desventajas cuando se tratan de trabajar con hilos y una de estas seria que al realizar un syscall para ejecutar un programa, se puede bloquear el proceso hasta que se reconozca o el sistema responda cómo actuar ante este llamado, cuando sucede esto se mantienen guardados los datos como sus registro, contadores, etc. mientras que respecto a nivel de núcleo no se presenta este inconveniente, es mas, dependiendo del programa se pueden usar varios procesadores para la tarea en cuestión. A la hora de programar en los diversos lenguajes de programación se pueden manejar hilos de manera “paralela”, pero hay otros que no lo logran por diversos motivos como bloqueos, por lo tanto, se trata de diferentes maneras entre los lenguajes.
 
 
 \newpage
 REFERENCIAS:\\\\
-
-
-
+Javier Alejandro Segura, Implementación de Threads – ULT y KLT.\\
+Rodriguez Garcia, Núcleos e hilos en un procesador: qué son y en qué se diferencian\\
+https://www.profesionalreview.com/2019/04/03/que-son-los-hilos-de-un-procesador/\\
+https://en.wikipedia.org/wiki/Thread\_(computing)\\
+http://bibing.us.es/proyectos/abreproy/11320/fichero/Capitulos\%252F13.pdf
 
 \end{document}
